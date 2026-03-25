@@ -1,0 +1,65 @@
+{
+    "engine": {
+        "type_ceiling": {
+            "STATUTORY":     1.00,
+            "SECURED_LOAN":  0.95,
+            "SALARY":        0.90,
+            "RENT":          0.80,
+            "UTILITY":       0.75,
+            "TRADE_PAYABLE": 0.60,
+            "OTHER":         0.40
+        },
+        "domain_floor": {
+            "STATUTORY":     40.0,
+            "SECURED_LOAN":  35.0,
+            "SALARY":        35.0,
+            "RENT":          20.0,
+            "UTILITY":       10.0,
+            "TRADE_PAYABLE":  5.0,
+            "OTHER":          0.0
+        },
+        "flexibility_discount": {
+            "FIXED":       0.0,
+            "NEGOTIABLE":  0.5,
+            "DEFERRABLE":  1.0
+        },
+        "sub_score_weights": {
+            "P": 0.25,
+            "U": 0.25,
+            "L": 0.25,
+            "C": 0.15,
+            "R": 0.10,
+            "F": 0.08
+        },
+        "penalty_cap_inr": 500000,
+        "urgency_zero_days": 90,
+        "statutory_urgent_floor": 95.0,
+        "statutory_urgent_hours": 24,
+        "score_bands": [
+            [70, "CRITICAL"],
+            [40, "HIGH"],
+            [21, "MEDIUM"],
+            [0,  "LOW"]
+        ],
+        "email_thresholds": [
+            [80, "WARM_APOLOGETIC"],
+            [40, "PROFESSIONAL_NEUTRAL"],
+            [0,  "FIRM_BRIEF"]
+        ],
+        "contagion_freeze_threshold": 0.60,
+        "contagion_freeze_score": 0.85,
+        "days_to_zero_window": 30
+    },
+    "parser": {
+        "default_penalty_rates": {
+            "STATUTORY":     18.0,
+            "SECURED_LOAN":  24.0,
+            "SALARY":         0.0,
+            "RENT":          12.0,
+            "UTILITY":        0.0,
+            "TRADE_PAYABLE":  0.0,
+            "OTHER":          0.0
+        }
+    },
+    "legal_disclaimer": "⚖️ FlowGuard is a decision-support tool, not financial or legal advice. Always consult a qualified CA or financial advisor before acting on these recommendations."
+}
